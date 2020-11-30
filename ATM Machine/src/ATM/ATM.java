@@ -1,7 +1,7 @@
 package ATM;
 
- 
-	import java.util.Scanner;
+
+import java.util.Scanner;
 
 	public class ATM {
 	    private static final Scanner in = new Scanner(System.in);

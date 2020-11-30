@@ -1,13 +1,18 @@
 package ATM;
 
+import java.util.ArrayList;
+
 public class Account {
     private int id = 0;
     private double balance = 0.0;
     private static double annualInterestRate = 0.0;
     private java.util.Date dateCreated;
+	private ArrayList<Object> transactions;
 
     public Account() {
         dateCreated = new java.util.Date();
+        setTransactions(new ArrayList<>());
+        
     }
 
     public Account(int id, double balance) {
@@ -41,7 +46,7 @@ public class Account {
     }
 
     public void setAnnualInterestRate(double annualInterestRate) {
-        this.annualInterestRate = annualInterestRate;
+        Account.annualInterestRate = annualInterestRate;
     }
 
     public double getMonthlyInterestRate() {
@@ -59,4 +64,12 @@ public class Account {
     public void deposit(double amount) {
         this.balance += amount;
     }
+
+	public ArrayList<Object> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(ArrayList<Object> transactions) {
+		this.transactions = transactions;
+	}
 } 
