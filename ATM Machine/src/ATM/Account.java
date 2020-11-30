@@ -1,6 +1,7 @@
 package ATM;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Account {
     private int id = 0;
@@ -19,6 +20,10 @@ public class Account {
         this();
         this.id = id;
         this.balance = balance;
+        annualInterestRate = 0.0;
+        dateCreated = new Date();
+
+        
     }
 
     public int getId() {
