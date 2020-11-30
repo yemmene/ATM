@@ -19,6 +19,7 @@ import java.util.Scanner;
 	            id = incorrectId(id);
 	        }
 
+	        
 	        while (true) {
 	            menuDisplay();
 	            System.out.print("Enter a choice: ");
