@@ -5,20 +5,20 @@ import java.util.Scanner;
 
 	public class ATM {
 	    private static final Scanner in = new Scanner(System.in);
-
+//Create ten accounts in an array with id 0, 1, ..., 9, and initial balance $100;
 	    public static void main(String[] args) {
 	        Account[] accounts = new Account[10];
 	        for (int i = 1; i < 11; i++) {
 	            accounts[i - 1] = new Account(i, 100.0);
 	        }
-
+//The system prompts the user to enter an id.
 	        System.out.print("Enter an id (1 - 10): ");
 	        int id = in.nextInt();
-
+//If the id is entered incorrectly, ask the user to enter a correct id.
 	        if (id < 1 || id > 10) {
 	            id = incorrectId(id);
 	        }
-
+//Once an id is accepted, the main menu is displayed as shown in the sample run.
 	        
 	        while (true) {
 	            menuDisplay();
@@ -66,7 +66,9 @@ import java.util.Scanner;
 	                break;
 	        }
 	    }
-
+/*You can enter a choice 1 for viewing the current balance, 2 for withdrawing money, 3 for
+	    depositing money, and 4 for exiting the main menu*/
+	    
 	    public static void menuDisplay() {
 	        System.out.printf("%nMain menu%n");
 	        System.out.println("1: check balance");
